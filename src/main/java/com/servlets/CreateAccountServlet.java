@@ -24,16 +24,12 @@ public class CreateAccountServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
-//        String accountNumber = request.getParameter("accountNumber");
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
         String address = request.getParameter("address");
         String city = request.getParameter("city");
         String state = request.getParameter("state");
-//        String zip = request.getParameter("zip");
-//        String country = request.getParameter("country");
         String password = request.getParameter("password");
 
         Customer customer = new Customer(name, email, phone, address, city, state, password);
@@ -41,10 +37,7 @@ public class CreateAccountServlet extends HttpServlet {
         Transaction tx = session.beginTransaction();
         session.persist(customer);
         tx.commit();
-//        response.setContentType("text/html");
-//        PrintWriter out = response.getWriter();
-//        out.println("<h1 style='text-align:center;'>Customer is added successfully</h1>");
-//        out.println("<h1 style='text-align:center;'><a href='listCustomers.jsp'>View all Customers</a></h1>");
+        session.close();
         response.sendRedirect("login.jsp");
     }
 }

@@ -38,13 +38,6 @@ public class Customer {
 
     @Column(name = "state")
     private String state;
-
-//    @Column(name = "zip")
-//    private String zip;
-//
-//    @Column(name = "country")
-//    private String country;
-
     @Column(name = "password")
     private String password;
 

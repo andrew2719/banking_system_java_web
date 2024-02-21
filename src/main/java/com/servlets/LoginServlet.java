@@ -36,9 +36,6 @@ public class LoginServlet extends HttpServlet {
         Customer customer = (Customer) query.uniqueResult();
 
         if (customer != null) {
-//            request.getSession().setAttribute("name", customer.getName());
-//            request.getSession().setAttribute("accountNumber", customer.getAccountNumber());
-//            request.getSession().setAttribute("balance", customer.getBalance());
             request.getSession().setAttribute("id", customer.getId());
             response.sendRedirect("home.jsp");
         } else {
