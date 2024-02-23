@@ -12,7 +12,68 @@
 <html>
 <head>
     <title>Home</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+     /* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+}
+
+p {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+form {
+    margin: 0 10px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Additional styling for the editProfile form */
+form[action="editProfile.jsp"] {
+    background-color: #3498db;
+}
+
+form[action="editProfile.jsp"] input[type="submit"] {
+    background-color: #2980b9;
+}
+
+form[action="editProfile.jsp"] input[type="submit"]:hover {
+    background-color: #216795;
+}
+
+    </style>
 </head>
 <body>
 
@@ -32,15 +93,10 @@
     <form action="LogoutServlet" method="post">
         <input type="submit" value="Logout" />
     </form>
-
-
-<%--    <a href="editProfile.jsp">edit</a>--%>
     <form action="editProfile.jsp">
-            <input type="hidden" name="id">
-            <input type="submit" value="Edit Profile">
+        <input type="hidden" name="id">
+        <input type="submit" value="Edit Profile">
     </form>
-
-
 </div>
 </body>
 </html>
