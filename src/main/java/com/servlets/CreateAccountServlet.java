@@ -38,6 +38,9 @@ public class CreateAccountServlet extends HttpServlet {
         session.persist(customer);
         tx.commit();
         session.close();
+
         response.sendRedirect("login.jsp");
     }
 }
+
+
