@@ -5,9 +5,9 @@
 <hibernate-configuration>
   <session-factory>
     <property name="connection.driver.class">com.mysql.jdbc.Driver</property>
-    <property name="connection.url">jdbc:mysql://localhost:3306/banking_application</property>
+    <property name="connection.url">jdbc:mysql://localhost:3306/BANK_DB</property>
     <property name="connection.username">root</property>
-    <property name="connection.password">Pab2719100coc7!</property>
+    <property name="connection.password">root</property>
     <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
     <property name="hbm2ddl.auto">update</property>
     <property name="show_sql">true</property>
